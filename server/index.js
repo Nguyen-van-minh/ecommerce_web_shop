@@ -20,7 +20,7 @@ app.use(cors())
 const connectDB = async () => {
     try {
         await mongoose.connect(
-            `mongodb+srv://admin:Minh30-08-2001@first.poozr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+            process.env.mongo_url,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true
